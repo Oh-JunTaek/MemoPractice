@@ -35,8 +35,11 @@ fun main() {
                     println("${index + 1}. ${memo.title} - ${memo.formattedTime()}")
                 }
                 println(Constants.FIND_MEMO)
-                val index = readLine()?.toIntOrNull() ?: -1
-                if (index == 0) {
+                println(Constants.FIND_MEMO)
+                val index = try {
+                    readLine()?.toIntOrNull() ?: -1
+                } catch (e: NumberFormatException) {
+                    println(Constants.ERROR_MESSAGE)
                     continue
                 }
                 val selectedMemo = memoManager.get(index - 1)
