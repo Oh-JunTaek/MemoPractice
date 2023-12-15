@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.memopractice"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.memopractice"
