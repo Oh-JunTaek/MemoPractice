@@ -35,7 +35,6 @@ fun main() {
                     println("${index + 1}. ${memo.title} - ${memo.formattedTime()}")
                 }
                 println(Constants.FIND_MEMO)
-                println(Constants.FIND_MEMO)
                 val index = try {
                     readLine()?.toIntOrNull() ?: -1
                 } catch (e: NumberFormatException) {
