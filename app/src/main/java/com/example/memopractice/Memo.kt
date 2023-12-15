@@ -1,3 +1,8 @@
 package com.example.memopractice
 
-data class Memo(val title: String, val content: String)
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
+
+data class Memo(var title: String, var content: String, var timestamp: LocalDateTime = LocalDateTime.now()) {
+    fun formattedTime(): String = timestamp.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"))
+}

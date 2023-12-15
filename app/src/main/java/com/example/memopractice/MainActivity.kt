@@ -2,6 +2,8 @@ package com.example.memopractice
 
 fun main() {
     val memoManager = MemoManager()
+
+
     println(Constants.HELLO)
 
     while (true) {
@@ -30,7 +32,7 @@ fun main() {
                     continue
                 }
                 memos.forEachIndexed { index, memo ->
-                    println("${index + 1}. ${memo.title}")
+                    println("${index + 1}. ${memo.title} - ${memo.formattedTime()}")
                 }
                 println(Constants.FIND_MEMO)
                 val index = readLine()?.toIntOrNull() ?: -1
