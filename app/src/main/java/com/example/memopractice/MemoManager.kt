@@ -12,28 +12,20 @@ class MemoManager {
     }
 
     fun get(index: Int): Memo? {
-        return if (index in memos.indices) {
-            memos[index]
-        } else {
-            null
-        }
+        return memos.getOrNull(index)
     }
 
     fun update(index: Int, memo: Memo): Boolean {
-        return if (index in memos.indices) {
+        return memos.getOrNull(index)?.let {
             memos[index] = memo
             true
-        } else {
-            false
-        }
+        } ?: false
     }
 
     fun remove(index: Int): Boolean {
-        return if (index in memos.indices) {
+        return memos.getOrNull(index)?.let {
             memos.removeAt(index)
             true
-        } else {
-            false
-        }
+        } ?: false
     }
 }
